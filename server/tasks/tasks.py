@@ -72,7 +72,7 @@ async def handle_user_out(user_id: str):
 
 async def get_all_data():
     connection, cursor = make_db()
-    query = "select * from campus_status;"
+    query = "select name, email, phone, status from campus_status natural join ticket_generator;"
     cursor.execute(query)
     results = cursor.fetchall()
     connection.commit()

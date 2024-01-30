@@ -5,7 +5,8 @@ from tasks import tasks
 
 app = FastAPI()
 origins = [
-    "http://localhost:5173"
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
@@ -37,7 +38,7 @@ async def user_out(user_id: str):
     response = await tasks.handle_user_out(modified_user_id)
     return response
 
-@app.get('/madarchod_ecell')
+@app.get('/get_all_data')
 async def all_data():
     response = await tasks.get_all_data()
     return response
