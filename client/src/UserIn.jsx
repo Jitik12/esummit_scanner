@@ -15,10 +15,12 @@ function UserIn() {
     setUserID(e.target.user_id.value);
     console.log(userID);
     try {
-      const response = await axios.get(`http://127.0.0.1:8080/in/${userID}`);
-      console.log(response.data);
+      const response = await axios.get(`https://scanner.iith-ac.in:8000/in/${userID}`);
+      console.log("Data Fetched")
+	    console.log(response.data);
       setResponse(response.data);
     } catch (error) {
+	console.log("Could not fetch data")
       console.error(error);
     }
     setUserID("");

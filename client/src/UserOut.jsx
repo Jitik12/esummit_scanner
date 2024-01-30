@@ -15,7 +15,7 @@ function UserOut() {
     setUserID(e.target.user_id.value);
     console.log(userID);
     try {
-      const response = await axios.get(`http://127.0.0.1:8080/out/${userID}`);
+      const response = await axios.get(`https://scanner.iith-ac.in:8000/out/${userID}`);
       console.log(response.data);
       setResponse(response.data);
     } catch (error) {
