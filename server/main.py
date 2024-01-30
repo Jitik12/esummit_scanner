@@ -37,5 +37,10 @@ async def user_out(user_id: str):
     response = await tasks.handle_user_out(modified_user_id)
     return response
 
+@app.get('/madarchod_ecell')
+async def all_data():
+    response = await tasks.get_all_data()
+    return response
+
 
 

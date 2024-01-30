@@ -1,6 +1,6 @@
 from .database import make_db
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+# import gspread
+# from oauth2client.service_account import ServiceAccountCredentials
 
 async def handle_user_in(user_id: str):
     connection, cursor = make_db()
@@ -69,3 +69,11 @@ async def handle_user_out(user_id: str):
         "status": "OUT",
     }
     return response
+
+async def get_all_data():
+    connection, cursor = make_db()
+    query = "select * from campus_status;"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    connection.commit()
+    return results
