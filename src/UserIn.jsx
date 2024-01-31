@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { Box, Typography } from "@mui/material";
+import { red } from "@mui/material/colors";
 
 function UserIn() {
   const [userID, setUserID] = useState("");
@@ -28,14 +30,14 @@ function UserIn() {
 
   return (
     <>
-      <div className="display">
-        <div>
-          <h1>Name : {response.name}</h1>
-          <h1>Email : {response.email}</h1>
-          <h1>Phone : {response.phone}</h1>
-          <h1>Status : {response.status}</h1>
-        </div>
-        <div className="main_form">
+      <Box className="display" bgcolor={"#70fd70"} >
+        <Box>
+          <Typography variant="h4">Name : {response.name}</Typography>
+          <Typography variant="h4">Email : {response.email}</Typography>
+          <Typography variant="h4">Phone : {response.phone}</Typography>
+          <Typography variant="h4">Status : {response.status}</Typography>
+        </Box>
+        <Box className="main_form">
           <form onSubmit={(e) => handleSubmit(e)}>
             <div>
               <label htmlFor="user_id">User ID : </label>
@@ -49,8 +51,8 @@ function UserIn() {
             </div>
             <button type="submit">Submit</button>
           </form>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 }

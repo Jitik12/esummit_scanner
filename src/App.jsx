@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import UserIn from './UserIn'
 import Root from './router/Root'
 import UserOut from './UserOut'
-import Table from "./router/Table";
+import Table from "./Table";
 
 const App = () => {
   const router = createBrowserRouter([

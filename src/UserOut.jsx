@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Box } from "@mui/material";
 
 function UserOut() {
   const [userID, setUserID] = useState("");
@@ -26,7 +27,7 @@ function UserOut() {
 
   return (
     <>
-      <div className="display">
+      <Box className="display" bgcolor={"#ff7171"}>
         <div>
           <h1>Name : {response.name}</h1>
           <h1>Email : {response.email}</h1>
@@ -48,7 +49,7 @@ function UserOut() {
             <button type="submit">Submit</button>
           </form>
         </div>
-      </div>
+      </Box>
     </>
   );
 }
