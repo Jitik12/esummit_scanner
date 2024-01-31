@@ -25,7 +25,7 @@ export default function BasicTable() {
 
   async function fetch(){
     try {
-      const res = await axios.get('http://scanner.iith-ac.in:8000/get_all_data');
+      const res = await axios.get('http://scanner.iith-ac.in:8000/get_all_data/');
       setRows(res.data);
     }
     catch (err) {
