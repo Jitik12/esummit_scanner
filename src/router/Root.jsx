@@ -17,7 +17,7 @@ const Root = () => {
   return (
     <div style={{padding: ".5rem"}}> 
       <Box>
-        <img src="/public/ecell_logo.png" alt="" />
+        <img src="/ecell_logo.png" alt="" />
       </Box>
       <Box style={{ display: "flex", "justify-content": "space-evenly" }}>
         <Button
