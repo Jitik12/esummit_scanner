@@ -5,10 +5,13 @@ import ssl
 
 app = FastAPI()
 origins = [
-        "https://scanner.iith-ac.in:443",
+        "http://scanner.iith-ac.in:443",
+        "http://scanner.iith-ac.in:80",
+        "http://scanner.iith-ac.in",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
-]
+"https://esummit-scanner.netlify.app"
+    ]
 
 app.add_middleware(
     CORSMiddleware,
