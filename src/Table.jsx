@@ -55,13 +55,16 @@ export default function BasicTable() {
             <TableRow
               key={i}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              style={{ backgroundColor: row[3] ? 'green' : 'red' }} // Conditionally set background color
             >
               <TableCell><Box>{row[0]}</Box></TableCell>
               <TableCell><Box>{row[1]}</Box></TableCell>
               <TableCell><Box>{row[2]}</Box></TableCell>
-              <TableCell><Box>{row[3]?"in":"out"}</Box></TableCell>
+              <TableCell><Box>{row[3] ? "in" : "out"}</Box></TableCell>
             </TableRow>
           ))}
+
+          {/* ))} */}
         </TableBody>
       </Table>
     </TableContainer>
