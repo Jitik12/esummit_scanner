@@ -15,7 +15,7 @@ const Root = () => {
   };
 
   return (
-    <div style={{padding: ".5rem"}}> 
+    <div style={{ padding: ".5rem" }}>
       <Box>
         <img src="/ecell_logo.png" alt="" />
       </Box>
@@ -24,7 +24,7 @@ const Root = () => {
           onClick={() => handleButtonClick("/in/")}
           style={{
             backgroundColor:
-              selectedButton === "/in/" ? "#70fd70" : "transparent",
+              selectedButton === "/in/" ? "#80ff80" : "transparent",
             flexGrow: 1,
           }}
         >
@@ -34,7 +34,7 @@ const Root = () => {
           onClick={() => handleButtonClick("/out")}
           style={{
             backgroundColor:
-              selectedButton === "/out" ? "#ff7171" : "transparent",
+              selectedButton === "/out" ? "#ff8686" : "transparent",
             flexGrow: 1,
           }}
         >

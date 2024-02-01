@@ -30,7 +30,7 @@ function UserIn() {
 
   return (
     <>
-      <Box className="display" bgcolor={"#70fd70"} >
+      <Box className="display" bgcolor={"#80ff80"}>
         <Box>
           <Typography variant="h4">Name : {response.name}</Typography>
           <Typography variant="h4">Email : {response.email}</Typography>

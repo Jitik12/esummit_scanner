@@ -27,7 +27,7 @@ function UserOut() {
 
   return (
     <>
-      <Box className="display" bgcolor={"#ff7171"}>
+      <Box className="display" bgcolor={"#ff8686"}>
         <div>
           <h1>Name : {response.name}</h1>
           <h1>Email : {response.email}</h1>
