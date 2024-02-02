@@ -46,7 +46,7 @@ export default function BasicTable() {
     <Box margin="2rem">
       <Box>
         <Typography variant="h6" color={"green"}>
-          Number of people registered : {count}
+          FootFall : {count}
         </Typography>
       </Box>
       <TableContainer component={Paper}>
