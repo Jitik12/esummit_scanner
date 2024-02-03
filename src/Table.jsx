@@ -10,7 +10,7 @@ import axios from 'axios';
 import { Box } from '@mui/material';
 
 export default function BasicTable() {
-  const columns = ["Name", "Email", "Phone", "Status"];
+  const columns = ["No","Name", "Email", "Phone", "Status"];
   const [done, setDone] = useState(false);
   // const rows = [
   //   [
