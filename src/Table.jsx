@@ -10,7 +10,7 @@ import axios from "axios";
 import { Box, Typography } from "@mui/material";
 
 export default function BasicTable() {
-  const columns = ["Name", "Email", "Phone", "Status"];
+  const columns = ["No","Name", "Email", "Phone", "Status"];
   const [done, setDone] = useState(false);
   // const rows = [
   //   [
@@ -44,6 +44,7 @@ export default function BasicTable() {
 
   return (
     <Box margin="2rem">
+<<<<<<< HEAD
       <Box>
         <Typography variant="h6" color={"green"}>
           FootFall : {count}
@@ -58,6 +59,29 @@ export default function BasicTable() {
                   <Box>{col}</Box>
                 </TableCell>
               ))}
+=======
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            {
+              columns.map((col, i) => (<TableCell key={i}><Box>{col}</Box></TableCell>))
+            }
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row, i) => (
+            <TableRow
+              key={i}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              style={{ backgroundColor: row[3] ? '#80ff80' : '#ff8686' }} // Conditionally set background color
+            >
+              <TableCell><Box>{i+1}</Box></TableCell>
+              <TableCell><Box>{row[0]}</Box></TableCell>
+              <TableCell><Box>{row[1]}</Box></TableCell>
+              <TableCell><Box>{row[2]}</Box></TableCell>
+              <TableCell><Box>{row[3] ? "in" : "out"}</Box></TableCell>
+>>>>>>> 8a47a4468339cb2f268cd8980e5aac9bbc2e3783
             </TableRow>
           </TableHead>
           <TableBody>
